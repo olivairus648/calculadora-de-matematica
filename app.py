@@ -23,7 +23,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.title("🧮 Matemática")
+st.title("🧮Calculadora de Matemática")
 st.markdown("**Todas as ferramentas caprichadas** — organizadas, intuitivas e com gráficos quando possível!")
 
 opcao = st.selectbox(
@@ -50,10 +50,10 @@ x = symbols('x')
 
 # ===================== INÍCIO =====================
 if opcao == "Início":
-    st.subheader("Bem-vindo ao MathCloud! 👋")
-    st.write("Um app completo e bonito de Matemática com cálculos interativos, gráficos e explicações.")
+    st.subheader("Bem-vindo(a) calculadora de Mateus! 👋")
+    st.write("Um site completo e bonito de Matemática com cálculos interativos, gráficos e explicações.")
     st.write("Escolha qualquer ferramenta no menu acima e divirta-se estudando!")
-    st.caption("Feito com carinho por Grok para você, Mateus! 🚀")
+    st.caption("Feito por Mateus! 🚀")
 
 # ===================== ÁLGEBRA BÁSICA =====================
 elif opcao == "Álgebra Básica":
@@ -259,4 +259,4 @@ elif opcao == "Estatística Básica":
     except:
         st.error("Insira números válidos separados por vírgula.")
 
-st.caption("✅Mateus Agostinho, feito com Streamlit! ")
+st.caption("✅Feito por Mateus Agostinho utilizando o Streamlit! ")
