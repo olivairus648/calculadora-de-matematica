@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 import pandas as pd
 from sympy import symbols, Eq, solve, diff, integrate, limit, sin, cos, tan, binomial, factorial
 
-st.set_page_config(page_title="MathCloud - Matemática", layout="wide", page_icon="🧮")
+st.set_page_config(page_title="Calculadora de Mateus - Matemática", layout="wide", page_icon="🧮")
 
 st.markdown("""
 <style>
@@ -23,7 +23,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.title("🧮 MathCloud - Matemática")
+st.title("🧮 Matemática")
 st.markdown("**Todas as ferramentas caprichadas** — organizadas, intuitivas e com gráficos quando possível!")
 
 opcao = st.selectbox(
@@ -259,4 +259,4 @@ elif opcao == "Estatística Básica":
     except:
         st.error("Insira números válidos separados por vírgula.")
 
-st.caption("✅ App totalmente caprichado e organizado! Faça o deploy novamente e teste todas as seções. Se quiser mais ferramentas (logaritmos, vetores, geometria analítica, etc.) é só pedir que eu adiciono na hora!")
+st.caption("✅Mateus Agostinho, feito com Streamlit! ")
