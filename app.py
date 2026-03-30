@@ -216,4 +216,31 @@ else:
             termos = [a1 + (k-1)*r for k in range(1, n+1)]
         else:
             r = st.number_input("Razão", value=2.0)
-            termos =
+            termos = [a1 * (r ** (k-1)) for k in range(1, n+1)]
+        st.write("Termos:", [round(t,4) for t in termos])
+
+    elif opcao == "Combinatória":
+        n = st.number_input("n", 5, 20, 5)
+        k = st.number_input("k", 0, n, 2)
+        st.write(f"**Combinação** C({n},{k}) = {binomial(n,k)}")
+        st.write(f"**Fatorial** {n}! = {factorial(n)}")
+
+    elif opcao == "Limites":
+        f_str = st.text_input("f(x)", "sin(x)/x")
+        ponto = st.number_input("x →", value=0.0)
+        try:
+            lim = limit(sp.sympify(f_str), x, ponto)
+            st.latex(f"lim = {sp.latex(lim)}")
+        except:
+            st.error("Erro no limite")
+
+    elif opcao == "Estatística Básica":
+        dados = st.text_input("Números (separados por vírgula)", "2,4,4,5,5,7,9")
+        try:
+            nums = np.array([float(i) for i in dados.split(",")])
+            st.write(f"Média = {np.mean(nums):.3f}")
+            st.write(f"Desvio Padrão = {np.std(nums):.3f}")
+        except:
+            st.error("Digite números corretamente")
+
+st.sidebar.caption("✅ Versão Completa e Funcionando - v1.5")
