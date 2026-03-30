@@ -7,7 +7,7 @@ from sympy import symbols, Eq, solve, diff, integrate, limit, sin, cos, tan, bin
 
 st.set_page_config(page_title="MathCloud - Matemática", layout="wide", page_icon="🧮")
 
-# CSS Melhorado para legibilidade
+# CSS Melhorado
 st.markdown("""
 <style>
     .stApp { background: linear-gradient(135deg, #1F002E, #4A0B6B); }
@@ -40,13 +40,13 @@ x = symbols('x')
 # ===================== INÍCIO =====================
 if opcao == "Início":
     st.title("👋 Bem-vindo ao MathCloud!")
-    st.write("Use o menu à esquerda para navegar.")
+    st.write("Use o menu à esquerda para navegar entre as ferramentas.")
     col1, col2, col3 = st.columns(3)
     col1.metric("Ferramentas", "14")
-    col2.metric("Gráficos", "Plotly")
-    col3.metric("Interativo", "✅")
+    col2.metric("Gráficos", "✅")
+    col3.metric("Interativo", "100%")
 
-# ===================== FUNÇÕES E GRÁFICOS (CORRIGIDO) =====================
+# ===================== FUNÇÕES E GRÁFICOS =====================
 elif opcao == "Funções e Gráficos":
     st.title("📈 Funções e Gráficos")
     
@@ -69,15 +69,4 @@ elif opcao == "Funções e Gráficos":
         func = a*x**2 + b*x + c
         f_str = f"{a}x² + {b}x + {c}"
     elif tipo == "Cúbica (3º grau)":
-        a = st.number_input("a (x³)", value=1.0)
-        b = st.number_input("b (x²)", value=0.0)
-        c = st.number_input("c (x)", value=-2.0)
-        d = st.number_input("d", value=1.0)
-        func = a*x**3 + b*x**2 + c*x + d
-        f_str = f"{a}x³ + {b}x² + {c}x + {d}"
-    elif tipo == "Trigonométrica":
-        trig = st.selectbox("Escolha", ["sin(x)", "cos(x)", "tan(x)"])
-        func = sin(x) if trig == "sin(x)" else cos(x) if trig == "cos(x)" else tan(x)
-        f_str = trig
-    elif tipo == "Exponencial":
-        base = st.number_input("Base", value=2.0
+        a = st.number_input("
