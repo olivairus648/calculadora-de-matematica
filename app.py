@@ -2,8 +2,7 @@ import streamlit as st
 import numpy as np
 import sympy as sp
 import plotly.graph_objects as go
-import pandas as pd
-from sympy import symbols, Eq, solve, diff, integrate, limit, sin, cos, tan, binomial, factorial
+from sympy import symbols, Eq, solve, sin, cos, tan
 
 st.set_page_config(page_title="MathCloud - Matemática", layout="wide", page_icon="🧮")
 
@@ -27,26 +26,22 @@ st.markdown("""
 st.sidebar.title("🧮 MathCloud")
 opcao = st.sidebar.radio(
     "Escolha uma ferramenta:",
-    [
-        "Início", "Álgebra Básica", "Resolução de Equações", "Funções e Gráficos",
-        "Derivadas", "Integrais", "Sistemas de Equações", "Matrizes e Determinantes",
-        "Trigonometria", "Teorema de Pitágoras", "Sequências e Progressões",
-        "Combinatória", "Limites", "Estatística Básica"
-    ]
+    ["Início", "Álgebra Básica", "Resolução de Equações", "Funções e Gráficos",
+     "Derivadas", "Integrais", "Sistemas de Equações", "Matrizes e Determinantes",
+     "Trigonometria", "Teorema de Pitágoras", "Sequências e Progressões",
+     "Combinatória", "Limites", "Estatística Básica"]
 )
 
 x = symbols('x')
 
-# ===================== INÍCIO =====================
 if opcao == "Início":
     st.title("👋 Bem-vindo ao MathCloud!")
-    st.write("Use o menu à esquerda para navegar entre as ferramentas.")
+    st.write("Use o menu à esquerda para navegar.")
     col1, col2, col3 = st.columns(3)
     col1.metric("Ferramentas", "14")
     col2.metric("Gráficos", "✅")
     col3.metric("Interativo", "100%")
 
-# ===================== FUNÇÕES E GRÁFICOS =====================
 elif opcao == "Funções e Gráficos":
     st.title("📈 Funções e Gráficos")
     
@@ -60,7 +55,7 @@ elif opcao == "Funções e Gráficos":
     if tipo == "Linear (1º grau)":
         a = st.number_input("a", value=2.0)
         b = st.number_input("b", value=-3.0)
-        func = a*x + b
+        func = a * x + b
         f_str = f"{a}x + {b}"
     elif tipo == "Quadrática (2º grau)":
         a = st.number_input("a (x²)", value=1.0)
@@ -69,4 +64,6 @@ elif opcao == "Funções e Gráficos":
         func = a*x**2 + b*x + c
         f_str = f"{a}x² + {b}x + {c}"
     elif tipo == "Cúbica (3º grau)":
-        a = st.number_input("
+        a = st.number_input("a (x³)", value=1.0)
+        b = st.number_input("b (x²)", value=0.0)
+       
