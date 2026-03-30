@@ -56,14 +56,14 @@ x = symbols('x')
 
 # ===================== INÍCIO =====================
 if opcao == "Início":
-    st.title("👋 Bem-vindo ao MathCloud!")
+    st.title("Bem-vindo a calculadora de matemática!")
     st.markdown("### App completo de Matemática")
     st.write("Escolha qualquer ferramenta no menu lateral.")
     col1, col2, col3 = st.columns(3)
     col1.metric("Ferramentas", "14")
     col2.metric("Gráficos", "✅")
     col3.metric("Interativo", "100%")
-    st.caption("Feito especialmente para você, Mateus! 🚀")
+    st.caption("Feito em python, por Mateus! 🚀")
 
 # ===================== FUNÇÕES E GRÁFICOS =====================
 elif opcao == "Funções e Gráficos":
